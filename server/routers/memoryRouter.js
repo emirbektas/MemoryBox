@@ -38,7 +38,8 @@ router.post("/", async (req, res) => {
 
     res.status(201).json(createdMemory);
   } catch (error) {
-    res.status(404).json({ message: "Create memory failed" });
+    console.log(error.message);
+    res.json({ message: "Create memory failed" });
   }
 });
 
